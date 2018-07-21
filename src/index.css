@@ -8,12 +8,70 @@ body,
 #root {
   height: 100%;
 }
-
+img {
+  max-width: 100%;
+}
+ul, li {
+  padding: 0;
+  margin: 0;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 100px;
+  font-family: 'Lato', sans-serif;
+}
+.searchBar {
+  margin-bottom: 40px;
+}
 input {
-  min-width: 200px;
+  width: 280px;
   min-height: 30px;
   padding: 5px 10px;
   font-size: 16px;
   border: 1px solid #333;
   border-radius: 3px;
+}
+.photosList {
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+}
+
+.photosList__item {
+flex-basis: 25%;
+overflow: hidden;
+display: flex;
+flex-direction: column;
+align-items: center;
+height: 320px;
+margin-bottom: 20px;
+}
+@media screen and (max-width: 992px) {
+  .photosList__item {
+    flex-basis: 33.33%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .photosList__item {
+    flex-basis: 50%;
+  }
+}
+  @media screen and (max-width: 480px) {
+    .photosList__item {
+      flex-basis: 100%;
+    }
+  }
+.photosList__title {
+  font-size: 24px;
+  margin: 0.5em;
+  font-family: 'Abril Fatface', cursive;
+
+}
+.photosList__img {
+  width: 99%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
